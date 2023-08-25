@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mybookly/Features/home/presentation/views/home_view.dart';
 import 'package:mybookly/core/utlis/assets.dart';
 
-import 'Sliding_teat.dart';
+import 'sliding_textt.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
