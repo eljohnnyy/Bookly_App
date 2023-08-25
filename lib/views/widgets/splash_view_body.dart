@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mybookly/Features/home/presentation/views/home_view.dart';
 import 'package:mybookly/core/utlis/assets.dart';
 
 import 'Sliding_teat.dart';
@@ -19,20 +20,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     //duration
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    //to manage value
-    slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 5), end: Offset.zero)
-            .animate(animationController);
-            //to move text
-            animationController.forward();
-           
-    
+    initsliginganimation();
+    navigatetohome();
   }
+
+ 
+
   @override
   void dispose() {
-    
     super.dispose();
     animationController.dispose();
   }
@@ -52,5 +47,22 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ],
     );
   }
-}
 
+  void initsliginganimation() {
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    //to manage value
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 5), end: Offset.zero)
+            .animate(animationController);
+    //to move text
+    animationController.forward();
+  }
+   void navigatetohome() {
+     Future.delayed(const Duration(seconds: 2), () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return const HomeView();
+      }));
+    });
+  }
+}
