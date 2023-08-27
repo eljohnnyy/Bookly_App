@@ -12,7 +12,13 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return CustomScrollView(
+      
+slivers: [
+  
+  SliverFillRemaining(
+    hasScrollBody: false,
+    child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(
         children: [
@@ -48,8 +54,10 @@ class BookDetailsViewBody extends StatelessWidget {
             height: 37,
           ),
           const BookAction(),
-          const SizedBox(
-            height: 50,
+         const Expanded(
+            child: SizedBox(
+              height: 50,
+            ),
           ),
           Align(
               alignment: Alignment.centerLeft,
@@ -61,7 +69,12 @@ class BookDetailsViewBody extends StatelessWidget {
              const  SimilarBookListView()
         ],
       ),
+    ),
+  )
+],
+
     );
+   
   }
 }
 
