@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utlis/assets.dart';
@@ -11,13 +10,11 @@ class BookImage extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 2.6 / 4,
       child: Container(
-          
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               color: Colors.red,
               image: const DecorationImage(
-                  fit: BoxFit.fill,
-                  image: AssetImage(AssetsData.testImage)))),
+                  fit: BoxFit.fill, image: AssetImage(AssetsData.testImage)))),
     );
   }
 }

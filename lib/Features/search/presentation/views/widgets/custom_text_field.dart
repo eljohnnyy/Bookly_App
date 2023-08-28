@@ -8,17 +8,18 @@ class CustomSearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: Colors.white,
-      
       decoration: InputDecoration(
-enabledBorder:  buildOutlineInputBorder(),
-focusedBorder: buildOutlineInputBorder(),
+          enabledBorder: buildOutlineInputBorder(),
+          focusedBorder: buildOutlineInputBorder(),
           hintText: 'Search',
           suffixIcon: IconButton(
               onPressed: () {},
-              icon:const Opacity(
+              icon: const Opacity(
                 opacity: 0.8,
-                child: Icon(FontAwesomeIcons.magnifyingGlass,color: Colors.white,
-                size: 22,
+                child: Icon(
+                  FontAwesomeIcons.magnifyingGlass,
+                  color: Colors.white,
+                  size: 22,
                 ),
               ))),
     );
@@ -26,9 +27,8 @@ focusedBorder: buildOutlineInputBorder(),
 
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
-borderRadius: BorderRadius.circular(12),
-borderSide:const  BorderSide(color: Colors.white),
-
-);
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(color: Colors.white),
+    );
   }
 }

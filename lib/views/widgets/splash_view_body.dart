@@ -25,8 +25,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     navigatetohome();
   }
 
- 
-
   @override
   void dispose() {
     super.dispose();
@@ -59,8 +57,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
     //to move text
     animationController.forward();
   }
-   void navigatetohome() {
-     Future.delayed(const Duration(seconds: 2), () {
+
+  void navigatetohome() {
+    Future.delayed(const Duration(seconds: 2), () {
       GoRouter.of(context).push('/homeview');
     });
   }
