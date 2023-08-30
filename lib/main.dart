@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -7,11 +7,12 @@ import 'package:mybookly/Features/home/Data/repos/home_repo_impl.dart';
 import 'package:mybookly/Features/home/presentation/manager/cubit/featured_books_cubit.dart';
 import 'package:mybookly/Features/home/presentation/manager/cubit/newset_books_cubit.dart';
 import 'package:mybookly/constants.dart';
-import 'package:mybookly/core/utlis/api_service.dart';
+
 import 'package:mybookly/core/utlis/app_router.dart';
 import 'package:mybookly/core/utlis/service_locator.dart';
 
 void main() {
+  setup();
   runApp(const BooklyApp());
 }
 
