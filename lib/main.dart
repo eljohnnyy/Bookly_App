@@ -12,8 +12,9 @@ import 'package:mybookly/core/utlis/app_router.dart';
 import 'package:mybookly/core/utlis/service_locator.dart';
 
 void main() {
-  setup();
+ setup();
   runApp(const BooklyApp());
+   
 }
 
 class BooklyApp extends StatelessWidget {
@@ -23,7 +24,7 @@ class BooklyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider( create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>())),
+        BlocProvider( create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>())..fetchFeaturedBooks()),
        BlocProvider(  create: (context) =>NewsetBooksCubit(getIt.get<HomeRepoImpl>())),
       ],
       child: MaterialApp.router(
