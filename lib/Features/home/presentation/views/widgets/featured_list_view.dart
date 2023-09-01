@@ -1,9 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mybookly/Features/home/presentation/manager/cubit/featured_books_cubit.dart';
+
 import 'package:mybookly/core/widgets/custom_error_widget.dart';
 
+import '../../view_model/cubit/featured_books_cubit.dart';
 import 'book_image.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -24,7 +25,7 @@ class FeaturedBooksListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return  Padding(
                   padding:const EdgeInsets.symmetric(horizontal: 8),
-                  child: BookImage(imageurl: state.books[index].volumeInfo.imageLinks.thumbnail,),
+                  child: BookImage(imageurl: state.books[index].volumeInfo.imageLinks?.thumbnail??'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXl2ubRQLVCm5Kz1CZI68adzNmLzC-Ui3CBCB8LdyJ&s',),
                 );
               }),
         );}

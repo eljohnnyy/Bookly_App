@@ -11,7 +11,7 @@ final String imageurl;
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: AspectRatio(
-        aspectRatio: 2.6 / 4,
+        aspectRatio: 2.5/ 4,
         child: CachedNetworkImage(
         
           errorWidget: (context, url, error) =>const Icon(Icons.error,color: Colors.red,size: 32,),

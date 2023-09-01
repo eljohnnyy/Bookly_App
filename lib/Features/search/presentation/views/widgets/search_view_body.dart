@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mybookly/Features/search/presentation/views/widgets/custom_text_field.dart';
 import 'package:mybookly/core/utlis/styles.dart';
 
-import '../../../../home/presentation/views/widgets/best_seller_list_view_item.dart';
+
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -48,7 +48,7 @@ class SearchResultListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(vertical: 10),
-            child: BestSellerListViewItem(),
+           // child: BestSellerListViewItem(),
           );
         });
     
